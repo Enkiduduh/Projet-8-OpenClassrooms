@@ -1,0 +1,27 @@
+.banner {
+    margin: 0 50px;
+    background: white;
+    color: black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+    img {
+      width: 130px;
+    }
+    .banner-text-wrapper {
+        font-size: 18px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px 0;
+        width: 230px;
+        font-family: 'Montserrat', sans-serif;
+        span {
+          margin: 0 10px;
+          &:hover {
+            border-bottom: 2px solid black;
+          }
+        }
+    }
+}

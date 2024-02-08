@@ -1,0 +1,23 @@
+.footer {
+    width: 100vw;
+    background: black;
+    color: white;
+
+    .footer-logo-wrapper {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 40px 0 10px 0;
+        .footer-logo {
+            width: 100px;
+        }
+    }
+    .footer-text {
+        font-size: 18px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+        font-family: 'Montserrat', sans-serif;
+    }
+}

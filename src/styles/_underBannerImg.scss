@@ -1,0 +1,36 @@
+.UnderBannerImg-container {
+    position: relative;
+    margin: 0 50px;
+    .UnderBannerImg-bg {
+        background-image: url('../assets/img_banner.png');
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        border-radius: 10px;
+        overflow: hidden;
+        padding: 30px;
+
+        .UnderBannerImg-title {
+            color: white;
+            text-align: center;
+            text-shadow: 1px 1px 2px black;
+            position: relative;
+            z-index: 2;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: bold;
+        }
+    }
+    .UnderBannerImg-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+        border-radius: 10px;
+        background-image: linear-gradient(
+            rgba(77, 76, 76, 0.3),
+            rgba(77, 76, 76, 0.3)
+        );
+    }
+}
