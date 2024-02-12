@@ -5,10 +5,11 @@ import Cards from './components/pages/Cards'
 import NotFound from './components/pages/NotFound'
 import './App.css'
 
-import { library } from '@fortawesome/fontawesome-svg-core'
-import { all } from '@awesome.me/kit-KIT_CODE/icons'
+import { library } from '@fortawesome/fontawesome-svg-core';
+import { faStar, faChevronUp, faChevronDown } from '@fortawesome/free-solid-svg-icons';
+// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
-library.add(...all)
+library.add(faStar, faChevronUp, faChevronDown);
 
 function App() {
     return (

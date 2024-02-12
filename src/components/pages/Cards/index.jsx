@@ -1,46 +1,54 @@
 import Footer from '../../Footer'
 import Banner from '../../Banner'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faStar, faChevronUp } from '@fortawesome/free-solid-svg-icons'
 
 function Cards() {
     return (
         <div className="container">
             <Banner />
             <div className="cards-container">
-                <img src="" alt="" />
+                <div className="card-img">
+                    <img src="" alt="" />
+                </div>
                 <div className="card-infos">
                     <div>
                         <h2>
-                            It is a long established fact that a reader will be
-                            distracted
+                            Cozy Loft on the Canal Saint-Martin
                         </h2>
-                        <span>There are many variations</span>
+                        <span>Paris, Île-de-France</span>
                     </div>
-                    <div>
-                        <span>Dolores Valksjo</span>
-                        <img src="" alt="" />
+                    <div className="infos-host">
+                        <span className="name">Dolores Valksjo</span>
+                        <div className="img">
+                            <img src="" alt="" />
+                        </div>
                     </div>
                 </div>
 
                 <div className="card-tags-and-rating">
                     <div className="card-tags">
-                      <span className="tags"></span>
-                      <span className="tags"></span>
-                      {/* ...And more */}
+                        <span className="tags">paris 10</span>
+                        <span className="tags">Cozy</span>
+                        {/* ...And more */}
                     </div>
                     <div className="card-rating">
-                        <FontAwesomeIcon icon="fa-solid fa-star" />
-                        <FontAwesomeIcon icon="fa-solid fa-star" />
-                        <FontAwesomeIcon icon="fa-solid fa-star" />
-                        <FontAwesomeIcon icon="fa-solid fa-star" />
-                        <FontAwesomeIcon icon="fa-solid fa-star" />
-                          {/* ...And up to 5 red stars according to rating*/}
+                        <FontAwesomeIcon icon={faStar} className="star" />
+                        <FontAwesomeIcon icon={faStar} className="star" />
+                        <FontAwesomeIcon icon={faStar} className="star" />
+                        <FontAwesomeIcon icon={faStar} className="star" />
+                        <FontAwesomeIcon icon={faStar} className="star" />
+                        {/* ...And up to 5 red stars according to rating*/}
                     </div>
                 </div>
 
                 <div className="card-collapse">
-                    <div className="card-collapse-left"></div>
-                    <div className="card-collapse-right"></div>
+                    <div className="card-collapse-left">
+                        <div>Description</div><FontAwesomeIcon icon={faChevronUp} />
+                    </div>
+                    <div className="card-collapse-right">
+                        <div>Equipements</div><FontAwesomeIcon icon={faChevronUp} />
+                    </div>
                 </div>
             </div>
             <Footer />
