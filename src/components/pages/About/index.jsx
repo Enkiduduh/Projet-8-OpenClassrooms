@@ -1,7 +1,12 @@
+import Footer from '../../Footer'
+import Banner from '../../Banner'
+
 function About() {
     return (
-          <div>
-            <p>Page About ;p</p>
+          <div className='container'>
+            <Banner />
+            <p>About page</p>
+            <Footer />
           </div>
     )
 }

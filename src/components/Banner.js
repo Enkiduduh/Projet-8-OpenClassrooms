@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import logo from '../assets/logo.png'
 
 function Banner() {
@@ -8,10 +9,14 @@ function Banner() {
             </div>
             <div className="banner-text-wrapper">
                 <div>
-                    <span>Accueil</span>
+                    <Link to="/">
+                        <span>Home</span>
+                    </Link>
                 </div>
                 <div>
-                    <span>A propos</span>
+                    <Link to="/about">
+                        <span>A propos</span>
+                    </Link>
                 </div>
             </div>
         </div>

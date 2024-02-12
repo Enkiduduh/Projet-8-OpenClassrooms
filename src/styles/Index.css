@@ -44,9 +44,13 @@
 }
 .banner .banner-text-wrapper span {
   margin: 0 10px;
+  color: #FF6060;
 }
 .banner .banner-text-wrapper span:hover {
   border-bottom: 2px solid black;
+}
+.banner a {
+  text-decoration: none;
 }
 
 .UnderBannerImg-container {
@@ -80,4 +84,44 @@
   z-index: 1;
   border-radius: 10px;
   background-image: linear-gradient(rgba(77, 76, 76, 0.3), rgba(77, 76, 76, 0.3));
+}
+
+.container {
+  overflow: hidden;
+}
+.container .notfound-infos {
+  margin: 50px 50px 80px 50px;
+  text-align: center;
+  font-family: "Montserrat", sans-serif;
+  color: #FF6060;
+}
+.container .notfound-infos .error {
+  font-size: 150px;
+  font-weight: bold;
+  margin: 0 0 40px 0;
+}
+.container .notfound-infos .message {
+  margin: 0 0 60px 0;
+  font-size: 18px;
+  font-weight: bold;
+}
+.container .notfound-infos .link, .container .notfound-infos link:active {
+  color: inherit;
+}
+
+.container {
+  overflow: hidden;
+}
+.container .cards-container {
+  margin: 0 50px;
+}
+.container .card-infos {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.container .card-tags-and-rating {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }/*# sourceMappingURL=Index.css.map */

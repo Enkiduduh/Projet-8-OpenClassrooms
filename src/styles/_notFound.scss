@@ -1,0 +1,23 @@
+.container {
+  overflow: hidden;
+  .notfound-infos {
+    margin: 50px 50px 80px 50px;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    color: #FF6060;
+
+    .error {
+      font-size: 150px;
+      font-weight: bold;
+      margin: 0 0 40px 0;
+    }
+    .message {
+      margin: 0 0 60px 0;
+      font-size: 18px;
+      font-weight: bold;
+    }
+    .link, link:active {
+      color: inherit;
+    }
+  }
+}

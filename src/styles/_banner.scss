@@ -6,6 +6,7 @@
     justify-content: space-between;
     align-items: center;
     padding: 20px 0;
+
     img {
       width: 130px;
     }
@@ -19,9 +20,13 @@
         font-family: 'Montserrat', sans-serif;
         span {
           margin: 0 10px;
+          color: #FF6060;
           &:hover {
             border-bottom: 2px solid black;
           }
         }
+    }
+    a {
+      text-decoration: none;
     }
 }

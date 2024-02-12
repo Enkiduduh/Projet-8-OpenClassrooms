@@ -1,0 +1,16 @@
+.container {
+  overflow: hidden;
+  .cards-container {
+    margin: 0 50px;
+  }
+  .card-infos {
+    display : flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .card-tags-and-rating {
+    display : flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
