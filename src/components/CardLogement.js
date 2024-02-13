@@ -1,21 +1,20 @@
-import Footer from '../../Footer'
-import Banner from '../../Banner'
+import {useParams} from 'react-router-dom'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faStar, faChevronUp } from '@fortawesome/free-solid-svg-icons'
 
-function Cards() {
+function CardLogement() {
+  const params = useParams()
+  console.log(params);
+  
     return (
-        <div className="container">
-            <Banner />
+        <>
             <div className="cards-container">
                 <div className="card-img">
                     <img src="" alt="" />
                 </div>
                 <div className="card-infos">
                     <div>
-                        <h2>
-                            Cozy Loft on the Canal Saint-Martin
-                        </h2>
+                        <h2>Cozy Loft on the Canal Saint-Martin</h2>
                         <span>Paris, Île-de-France</span>
                     </div>
                     <div className="infos-host">
@@ -44,16 +43,17 @@ function Cards() {
 
                 <div className="card-collapse">
                     <div className="card-collapse-left">
-                        <div>Description</div><FontAwesomeIcon icon={faChevronUp} />
+                        <div>Description</div>
+                        <FontAwesomeIcon icon={faChevronUp} />
                     </div>
                     <div className="card-collapse-right">
-                        <div>Equipements</div><FontAwesomeIcon icon={faChevronUp} />
+                        <div>Equipements</div>
+                        <FontAwesomeIcon icon={faChevronUp} />
                     </div>
                 </div>
             </div>
-            <Footer />
-        </div>
+        </>
     )
 }
 
-export default Cards
+export default CardLogement

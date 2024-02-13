@@ -1,0 +1,14 @@
+.logement-card {
+    width: 80px;
+    height: 80px;
+    border-radius: 8px;
+    position: relative;
+    .logement-img {
+      width: 80px;
+      height: 80px;
+    }
+    .logement-title {
+      position:relative;
+      top:20px;
+    }
+}

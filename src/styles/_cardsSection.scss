@@ -1,0 +1,11 @@
+.card-section-container {
+  margin: 20px 50px;
+  background: lightgray;
+  padding: 30px;
+  display: grid ;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  border-radius:  8px;
+  justify-items: center;
+  align-items: center;
+}

@@ -2,7 +2,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faChevronUp, faChevronDown } from '@fortawesome/free-solid-svg-icons'
 import { useState } from 'react'
 
-function Collapse({ str }) {
+function Collapse({ str , text }) {
     const [windowDown, setWindowDown] = useState(false)
 
     return (
@@ -17,16 +17,9 @@ function Collapse({ str }) {
             </div>
             <div className={`collapse-window ${windowDown && 'window-down'}`}>
                 <div
-                    className={`window-content ${windowDown ? 'lightgreen' : 'lightcyan'}`}
+                    className={`window-content ${windowDown ? 'd-block' : 'd-none'}`}
                 >
-                    <p>
-                        It is a long established fact that a reader will be
-                        distracted by the readable content of a page when
-                        looking at its layout. The point of using Lorem Ipsum is
-                        that it has a more-or-less normal distribution of
-                        letters, as opposed to using 'Content here, content
-                        here', making it look like readable English.
-                    </p>
+                    <p>{text}</p>
                 </div>
             </div>
         </div>

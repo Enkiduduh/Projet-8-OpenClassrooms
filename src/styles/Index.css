@@ -2,6 +2,8 @@
   width: 100vw;
   background: black;
   color: white;
+  margin: 20px 0 0 0;
+  overflow: hidden;
 }
 .footer .footer-logo-wrapper {
   display: flex;
@@ -185,7 +187,7 @@
 }
 
 .BannerImgAbout-container {
-  margin: 0 50px;
+  margin: 0 50px 20px 50px;
 }
 .BannerImgAbout-container .BannerImgAbout-img {
   background-image: url("../assets/img_about.png");
@@ -204,13 +206,15 @@
 .container .collapse-container {
   padding: 10px;
   border-radius: 8px;
-  width: 600px;
-  margin: 0 auto;
+  width: 800px;
+  margin: 10px auto;
   color: white;
   background-color: #ff6060;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  position: relative;
+  z-index: 2;
 }
 .container .collapse-container .collapse-window {
   margin: 0 auto;
@@ -220,21 +224,82 @@
   display: flex;
 }
 .container .window-content {
-  width: 590px;
-  height: 80px;
+  padding: 15px;
+  width: 790px;
   margin: 0 auto;
   display: flex;
   align-items: center;
+  position: relative;
+  top: -15px;
+  z-index: 1;
+  border-bottom-right-radius: 8px;
+  border-bottom-left-radius: 8px;
 }
-.container .window-content.lightcyan {
-  background: lightcyan;
+.container .window-content.d-block {
+  display: block;
+  background: #f1f1f1;
 }
-.container .window-content.lightgreen {
-  background: lightgreen;
+.container .window-content.d-none {
+  display: none;
 }
 .container .window-content p {
-  color: green;
+  color: black;
+  margin: 0;
 }
 .window-down .container .window-content p {
   color: blue;
+}
+
+.logement-card {
+  width: 80px;
+  height: 80px;
+  border-radius: 8px;
+  position: relative;
+}
+.logement-card .logement-img {
+  width: 80px;
+  height: 80px;
+}
+.logement-card .logement-title {
+  position: relative;
+  top: 20px;
+}
+
+.card-section-container {
+  margin: 20px 50px;
+  background: lightgray;
+  padding: 30px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  border-radius: 8px;
+  justify-items: center;
+  align-items: center;
+}
+
+.logement-card {
+  width: 300px;
+  height: 300px;
+  border-radius: 8px;
+  position: relative;
+  overflow: hidden;
+  z-index: 0;
+}
+.logement-card .logement-img {
+  width: 300px;
+  height: 300px;
+  position: relative;
+  z-index: 2;
+}
+.logement-card .logement-title {
+  position: relative;
+  top: -60px;
+  left: 20px;
+  z-index: 5;
+  display: block;
+  width: 250px;
+  color: white;
+  font-family: "Montserrat", sans-serif;
+  text-shadow: 1px 1px 2px black;
+  font-size: 16px;
 }/*# sourceMappingURL=Index.css.map */
