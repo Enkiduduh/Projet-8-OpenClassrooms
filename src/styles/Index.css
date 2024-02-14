@@ -114,16 +114,19 @@
 .container {
   overflow: hidden;
   font-family: "Montserrat", sans-serif;
-  color: #FF6060;
+  color: #ff6060;
 }
 .container .cards-container {
   margin: 0 50px;
 }
 .container .cards-container .card-img {
   height: 300px;
+  width: 100%;
   border-radius: 8px;
-  background: yellow;
   margin-bottom: 30px;
+}
+.container .cards-container .card-img img {
+  height: 300px;
 }
 .container .cards-container .card-infos {
   display: flex;
@@ -147,9 +150,11 @@
   background: grey;
   border-radius: 30px;
   margin-left: 10px;
+  overflow: hidden;
+  display: flex;
 }
 .container .cards-container .card-infos .infos-host .name {
-  width: 100px;
+  width: 80px;
   text-align: right;
 }
 .container .cards-container .card-tags-and-rating {
@@ -160,7 +165,7 @@
 }
 .container .cards-container .card-tags-and-rating .tags {
   color: white;
-  background-color: #FF6060;
+  background-color: #ff6060;
   padding: 5px 30px;
   border-radius: 15px;
   margin-right: 15px;
@@ -172,18 +177,7 @@
 .container .cards-container .card-collapse {
   display: flex;
   justify-content: space-between;
-  align-items: center;
   margin: 30px 0;
-}
-.container .cards-container .card-collapse .card-collapse-left, .container .cards-container .card-collapse .card-collapse-right {
-  padding: 10px;
-  border-radius: 8px;
-  width: 500px;
-  color: white;
-  background-color: #FF6060;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
 }
 
 .BannerImgAbout-container {
@@ -267,7 +261,7 @@
 
 .card-section-container {
   margin: 20px 50px;
-  background: lightgray;
+  background: whitesmoke;
   padding: 30px;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -277,7 +271,10 @@
   align-items: center;
 }
 
-.logement-card {
+a {
+  text-decoration: none;
+}
+a .logement-card {
   width: 300px;
   height: 300px;
   border-radius: 8px;
@@ -285,13 +282,13 @@
   overflow: hidden;
   z-index: 0;
 }
-.logement-card .logement-img {
+a .logement-card .logement-img {
   width: 300px;
   height: 300px;
   position: relative;
   z-index: 2;
 }
-.logement-card .logement-title {
+a .logement-card .logement-title {
   position: relative;
   top: -60px;
   left: 20px;
@@ -302,4 +299,66 @@
   font-family: "Montserrat", sans-serif;
   text-shadow: 1px 1px 2px black;
   font-size: 16px;
+  text-decoration-line: none;
+}
+
+.container-cil {
+  display: flex;
+  flex-direction: column;
+}
+.container-cil .collapse-container {
+  padding: 10px;
+  border-radius: 8px;
+  width: 400px;
+  margin: 10px auto;
+  color: white;
+  background-color: #ff6060;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  z-index: 2;
+}
+.container-cil .collapse-container .collapse-window {
+  margin: 0 auto;
+  display: none;
+}
+.container-cil .collapse-container .collapse-window.window-down {
+  display: flex;
+}
+.container-cil .window-content {
+  padding: 15px;
+  width: 390px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  position: relative;
+  top: -15px;
+  z-index: 1;
+  border-bottom-right-radius: 8px;
+  border-bottom-left-radius: 8px;
+}
+.container-cil .window-content.d-block {
+  display: block;
+  background: #f1f1f1;
+}
+.container-cil .window-content.d-none {
+  display: none;
+}
+.container-cil .window-content .collapse-text-or-array {
+  color: black;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+.window-down .container-cil .window-content .collapse-text-or-array {
+  color: blue;
+}
+
+.star {
+  color: lightgrey;
+}
+
+.star-colored {
+  color: #ff6060;
 }/*# sourceMappingURL=Index.css.map */

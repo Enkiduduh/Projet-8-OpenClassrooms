@@ -1,26 +1,30 @@
-.logement-card {
-  width: 300px;
-  height: 300px;
-  border-radius: 8px;
-  position: relative;
-  overflow: hidden;
-  z-index: 0;
-  .logement-img {
-    width: 300px;
-    height: 300px;
-    position:relative;
-    z-index: 2;
-  }
-  .logement-title {
-    position:relative;
-    top:-60px;
-    left: 20px;
-    z-index: 5;
-    display:block;
-    width: 250px;
-    color:white;
-    font-family: 'Montserrat', sans-serif;
-    text-shadow: 1px 1px 2px black;
-    font-size:16px;
-  }
+a {
+    text-decoration: none;
+    .logement-card {
+        width: 300px;
+        height: 300px;
+        border-radius: 8px;
+        position: relative;
+        overflow: hidden;
+        z-index: 0;
+        .logement-img {
+            width: 300px;
+            height: 300px;
+            position: relative;
+            z-index: 2;
+        }
+        .logement-title {
+            position: relative;
+            top: -60px;
+            left: 20px;
+            z-index: 5;
+            display: block;
+            width: 250px;
+            color: white;
+            font-family: 'Montserrat', sans-serif;
+            text-shadow: 1px 1px 2px black;
+            font-size: 16px;
+            text-decoration-line: none;
+        }
+    }
 }
