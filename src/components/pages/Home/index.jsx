@@ -1,16 +1,16 @@
 import Footer from '../../Footer'
 import Banner from '../../Banner'
 import UnderBannerImg from '../../UnderBannerImg'
-import CardsSection from '../../CardsSection'
-import DataJson from '../../DataJson'
+import LogementsSection from '../../LogementsSection'
+import LogementVignette from '../../LogementVignette'
 function Home() {
     return (
         <div style={{ overflow: 'hidden'}}>
             <Banner />
             <UnderBannerImg />
-            <CardsSection>
-            <DataJson />
-            </CardsSection>
+            <LogementsSection>
+            <LogementVignette />
+            </LogementsSection>
             <Footer />
         </div>
     )

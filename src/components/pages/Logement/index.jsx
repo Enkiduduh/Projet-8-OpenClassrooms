@@ -3,8 +3,11 @@ import React, { useState, useEffect } from 'react'
 import Footer from '../../Footer'
 import Banner from '../../Banner'
 import Rating from '../../Rating'
+import Tags from '../../Tags'
+import LogementCover from '../../LogementCover'
+import LogementLocation from '../../LogementLocation'
+import LogementHost from '../../LogementHost'
 import CollapseInLogement from '../../CollapseInLogement'
-
 
 function CardsPage() {
     const [logements, setLogements] = useState([])
@@ -37,34 +40,14 @@ function CardsPage() {
             <Banner />
             {logement && (
                 <div className="cards-container">
-                    <div
-                        className="card-img"
-                        style={{
-                            backgroundImage: `url(${logement.cover})`,
-                            backgroundPosition: 'center',
-                            backgroundRepeat: 'no-repeat'
-                        }}
-                    ></div>
+                    <LogementCover cover={logement.cover}/>
                     <div className="card-infos">
-                        <div>
-                            <h2>{logement.title}</h2>
-                            <span>{logement.location}</span>
-                        </div>
-                        <div className="infos-host">
-                            <span className="name">{logement.host.name}</span>
-                            <div className="img">
-                                <img src={logement.host.picture} alt="" />
-                            </div>
-                        </div>
+                        <LogementLocation title={logement.title} location={logement.location} />
+                        <LogementHost name={logement.host.name} picture={logement.host.picture}/>
                     </div>
-
                     <div className="card-tags-and-rating">
-                        <div className="card-tags">
-                            <span className="tags">paris 10</span>
-                            <span className="tags">Cozy</span>
-                            {/* ...And more */}
-                        </div>
-                        <Rating rating={logement.rating}/>
+                        <Tags tags={logement.tags} />
+                        <Rating rating={logement.rating} />
                     </div>
 
                     <div className="card-collapse">

@@ -1,0 +1,39 @@
+.container {
+    overflow: hidden;
+    font-family: 'Montserrat', sans-serif;
+    color: #ff6060;
+    .cards-container {
+        margin: 0 50px;
+        .card-img {
+            height: 300px;
+            width: 100%;
+            border-radius: 8px;
+            margin-bottom: 30px;
+            img {
+                height: 300px;
+            }
+        }
+        .card-infos {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            h2 {
+                margin: 0;
+                font-weight: 600;
+                font-size: 28px;
+            }
+            
+        }
+        .card-tags-and-rating {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin: 20px 0 0 0;
+        }
+        .card-collapse {
+            display: flex;
+            justify-content: space-between;
+            margin: 10px 0;
+        }
+    }
+}

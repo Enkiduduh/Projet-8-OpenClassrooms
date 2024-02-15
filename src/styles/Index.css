@@ -138,46 +138,16 @@
   font-weight: 600;
   font-size: 28px;
 }
-.container .cards-container .card-infos .infos-host {
-  display: flex;
-  align-items: center;
-  justify-content: right;
-  width: 200px;
-}
-.container .cards-container .card-infos .infos-host .img {
-  width: 50px;
-  height: 50px;
-  background: grey;
-  border-radius: 30px;
-  margin-left: 10px;
-  overflow: hidden;
-  display: flex;
-}
-.container .cards-container .card-infos .infos-host .name {
-  width: 80px;
-  text-align: right;
-}
 .container .cards-container .card-tags-and-rating {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: 30px 0;
-}
-.container .cards-container .card-tags-and-rating .tags {
-  color: white;
-  background-color: #ff6060;
-  padding: 5px 30px;
-  border-radius: 15px;
-  margin-right: 15px;
-  font-size: 12px;
-}
-.container .cards-container .card-tags-and-rating .star {
-  margin-left: 5px;
+  margin: 20px 0 0 0;
 }
 .container .cards-container .card-collapse {
   display: flex;
   justify-content: space-between;
-  margin: 30px 0;
+  margin: 10px 0;
 }
 
 .BannerImgAbout-container {
@@ -244,21 +214,6 @@
   color: blue;
 }
 
-.logement-card {
-  width: 80px;
-  height: 80px;
-  border-radius: 8px;
-  position: relative;
-}
-.logement-card .logement-img {
-  width: 80px;
-  height: 80px;
-}
-.logement-card .logement-title {
-  position: relative;
-  top: 20px;
-}
-
 .card-section-container {
   margin: 20px 50px;
   background: whitesmoke;
@@ -282,15 +237,9 @@ a .logement-card {
   overflow: hidden;
   z-index: 0;
 }
-a .logement-card .logement-img {
-  width: 300px;
-  height: 300px;
-  position: relative;
-  z-index: 2;
-}
 a .logement-card .logement-title {
   position: relative;
-  top: -60px;
+  top: 250px;
   left: 20px;
   z-index: 5;
   display: block;
@@ -300,6 +249,26 @@ a .logement-card .logement-title {
   text-shadow: 1px 1px 2px black;
   font-size: 16px;
   text-decoration-line: none;
+}
+
+.infos-host {
+  display: flex;
+  align-items: center;
+  justify-content: right;
+  width: 200px;
+}
+.infos-host .img {
+  width: 50px;
+  height: 50px;
+  background: grey;
+  border-radius: 30px;
+  margin-left: 10px;
+  overflow: hidden;
+  display: flex;
+}
+.infos-host .name {
+  width: 80px;
+  text-align: right;
 }
 
 .container-cil {
@@ -357,8 +326,25 @@ a .logement-card .logement-title {
 
 .star {
   color: lightgrey;
+  margin-left: 5px;
 }
 
 .star-colored {
   color: #ff6060;
+}
+
+.card-tags {
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+.card-tags .tags {
+  color: white;
+  background-color: #ff6060;
+  padding: 5px 20px;
+  border-radius: 15px;
+  margin-right: 15px;
+  font-size: 10px;
+  font-weight: bold;
+  text-align: center;
 }/*# sourceMappingURL=Index.css.map */

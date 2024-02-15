@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 
-function App() {
+function LogementVignette() {
     const [logements, setLogements] = useState([])
 
     useEffect(() => {
@@ -25,12 +25,15 @@ function App() {
         <>
             {logements.map((logement) => (
                 <Link to={`/logement/${logement.id}`} key={logement.id}>
-                    <div className="logement-card">
-                        <img
-                            className="logement-img"
-                            src={logement.cover}
-                            alt={logement.title}
-                        />
+                    <div
+                        className="logement-card"
+                        style={{
+                            backgroundImage: `url(${logement.cover})`,
+                            backgroundPosition: 'center',
+                            backgroundRepeat: 'no-repeat',
+                            backgroundSize: 'cover',
+                        }}
+                    >
                         <span className="logement-title">{logement.title}</span>
                     </div>
                 </Link>
@@ -39,4 +42,4 @@ function App() {
     )
 }
 
-export default App
+export default LogementVignette

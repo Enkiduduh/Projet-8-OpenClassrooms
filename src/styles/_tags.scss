@@ -1,0 +1,16 @@
+.card-tags {
+display : flex;
+margin: 0;
+padding: 0;
+
+    .tags {
+        color: white;
+        background-color: #ff6060;
+        padding: 5px 20px;
+        border-radius: 15px;
+        margin-right: 15px;
+        font-size: 10px;
+        font-weight: bold;
+        text-align: center;
+    }
+}
