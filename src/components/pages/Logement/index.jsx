@@ -40,7 +40,7 @@ function CardsPage() {
             <Banner />
             {logement && (
                 <div className="cards-container">
-                    <LogementCover cover={logement.cover}/>
+                    <LogementCover arrayOfPictures={logement.pictures}/>
                     <div className="card-infos">
                         <LogementLocation title={logement.title} location={logement.location} />
                         <LogementHost name={logement.host.name} picture={logement.host.picture}/>

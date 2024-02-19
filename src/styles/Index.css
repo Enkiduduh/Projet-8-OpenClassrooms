@@ -124,6 +124,10 @@
   width: 100%;
   border-radius: 8px;
   margin-bottom: 30px;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 .container .cards-container .card-img img {
   height: 300px;
@@ -278,7 +282,7 @@ a .logement-card .logement-title {
 .container-cil .collapse-container {
   padding: 10px;
   border-radius: 8px;
-  width: 400px;
+  width: 500px;
   margin: 10px auto;
   color: white;
   background-color: #ff6060;
@@ -297,7 +301,7 @@ a .logement-card .logement-title {
 }
 .container-cil .window-content {
   padding: 15px;
-  width: 390px;
+  width: 490px;
   margin: 0 auto;
   display: flex;
   align-items: center;
@@ -322,6 +326,28 @@ a .logement-card .logement-title {
 }
 .window-down .container-cil .window-content .collapse-text-or-array {
   color: blue;
+}
+
+.chevronLeft, .chevronRight {
+  position: relative;
+  font-size: 50px;
+  color: white;
+}
+
+.chevronRight {
+  margin: 0 25px 0 0;
+}
+
+.chevronLeft {
+  margin: 0 0 0 25px;
+}
+
+.counter {
+  font-size: 18px;
+  color: white;
+  position: relative;
+  bottom: -120px;
+  text-shadow: 1px 1px 2px black;
 }
 
 .star {
