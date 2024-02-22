@@ -23,6 +23,15 @@
   font-family: "Montserrat", sans-serif;
 }
 
+@media only screen and (max-width: 480px) {
+  .footer .footer-text {
+    padding: 0 0 20px 0;
+    width: 100px;
+    margin: 0 auto;
+    font-size: 12px;
+    text-align: center;
+  }
+}
 .banner {
   margin: 0 50px;
   background: white;
@@ -41,12 +50,12 @@
   justify-content: space-between;
   align-items: center;
   padding: 20px 0;
-  width: 230px;
+  width: 50%;
   font-family: "Montserrat", sans-serif;
 }
 .banner .banner-text-wrapper span {
   margin: 0 10px;
-  color: #FF6060;
+  color: #ff6060;
 }
 .banner .banner-text-wrapper span:hover {
   border-bottom: 2px solid black;
@@ -55,6 +64,17 @@
   text-decoration: none;
 }
 
+@media only screen and (max-width: 480px) {
+  .banner {
+    margin: 0 10px;
+  }
+  .banner img {
+    width: 90px;
+  }
+  .banner .banner-text-wrapper span {
+    font-size: 14px;
+  }
+}
 .UnderBannerImg-container {
   position: relative;
   margin: 0 50px;
@@ -85,9 +105,25 @@
   height: 100%;
   z-index: 1;
   border-radius: 10px;
-  background-image: linear-gradient(rgba(77, 76, 76, 0.3), rgba(77, 76, 76, 0.3));
+  background-image: linear-gradient(rgba(77, 76, 76, 0.5), rgba(77, 76, 76, 0.5));
 }
 
+@media only screen and (max-width: 480px) {
+  .UnderBannerImg-container {
+    margin: 0 10px;
+  }
+  .UnderBannerImg-container .UnderBannerImg-bg {
+    padding: 10px;
+  }
+  .UnderBannerImg-container .UnderBannerImg-bg .UnderBannerImg-title {
+    text-align: left;
+    padding: 10px 0;
+  }
+  .UnderBannerImg-container .UnderBannerImg-bg .UnderBannerImg-title h1 {
+    font-size: 22px;
+    margin: 0;
+  }
+}
 .container {
   overflow: hidden;
 }
@@ -219,7 +255,7 @@
 }
 
 .card-section-container {
-  margin: 20px 50px;
+  margin: 20px 20px;
   background: whitesmoke;
   padding: 30px;
   display: grid;
@@ -230,6 +266,13 @@
   align-items: center;
 }
 
+@media only screen and (max-width: 480px) {
+  .card-section-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+}
 a {
   text-decoration: none;
 }
@@ -255,6 +298,24 @@ a .logement-card .logement-title {
   text-decoration-line: none;
 }
 
+@media only screen and (max-width: 480px) {
+  a .logement-card {
+    height: 235px;
+  }
+  a .logement-card .logement-title {
+    position: relative;
+    top: 250px;
+    left: 20px;
+    z-index: 5;
+    display: block;
+    width: 250px;
+    color: white;
+    font-family: "Montserrat", sans-serif;
+    text-shadow: 1px 1px 2px black;
+    font-size: 16px;
+    text-decoration-line: none;
+  }
+}
 .infos-host {
   display: flex;
   align-items: center;

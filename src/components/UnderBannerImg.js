@@ -1,16 +1,23 @@
-// import bgImg from '../assets/img_banner.png'
-
 function UnderBannerImg() {
-    return (
-        <div className="UnderBannerImg-container">
-            <div className="UnderBannerImg-bg">
-                <div className="UnderBannerImg-overlay"></div>
-                <div className="UnderBannerImg-title">
-                    <h1>Chez vous, partout et ailleurs</h1>
-                </div>
-            </div>
-        </div>
-    )
+  const isScreenWider = window.innerWidth > 480;
+
+  return (
+      <div className="UnderBannerImg-container">
+          <div className="UnderBannerImg-bg">
+              <div className="UnderBannerImg-overlay"></div>
+              <div className="UnderBannerImg-title">
+                  {isScreenWider ? (
+                      <h1>Chez vous, partout et ailleurs</h1>
+                  ) : (
+                      <>
+                          <h1>Chez vous,</h1>
+                          <h1>partout et ailleurs</h1>
+                      </>
+                  )}
+              </div>
+          </div>
+      </div>
+  );
 }
 
-export default UnderBannerImg
+export default UnderBannerImg;

@@ -8,7 +8,7 @@
     padding: 20px 0;
 
     img {
-      width: 130px;
+        width: 130px;
     }
     .banner-text-wrapper {
         font-size: 18px;
@@ -16,17 +16,31 @@
         justify-content: space-between;
         align-items: center;
         padding: 20px 0;
-        width: 230px;
+        width: 50%;
         font-family: 'Montserrat', sans-serif;
         span {
-          margin: 0 10px;
-          color: #FF6060;
-          &:hover {
-            border-bottom: 2px solid black;
-          }
+            margin: 0 10px;
+            color: #ff6060;
+            &:hover {
+                border-bottom: 2px solid black;
+            }
         }
     }
     a {
-      text-decoration: none;
+        text-decoration: none;
+    }
+}
+
+@media only screen and (max-width:480px) {
+    .banner {
+      margin: 0 10px;
+        img {
+            width: 90px;
+        }
+        .banner-text-wrapper {
+          span {
+            font-size: 14px;
+          }
+        }
     }
 }

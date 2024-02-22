@@ -29,8 +29,25 @@
         z-index: 1;
         border-radius: 10px;
         background-image: linear-gradient(
-            rgba(77, 76, 76, 0.3),
-            rgba(77, 76, 76, 0.3)
+            rgba(77, 76, 76, 0.5),
+            rgba(77, 76, 76, 0.5)
         );
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .UnderBannerImg-container {
+        margin: 0 10px;
+        .UnderBannerImg-bg {
+            padding: 10px;
+            .UnderBannerImg-title {
+                text-align: left;
+                padding: 10px 0;
+                h1 {
+                  font-size: 22px;
+                  margin: 0;
+                }
+            }
+        }
     }
 }

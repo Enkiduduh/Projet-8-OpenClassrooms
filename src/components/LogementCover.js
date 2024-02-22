@@ -42,6 +42,7 @@ function LogementCover({ arrayOfPictures }) {
                 <FontAwesomeIcon
                     icon={faChevronRight}
                     className="chevronRight"
+
                     onClick={goToNextSlide}
                 />
             </div>
