@@ -27,13 +27,13 @@ function LogementVignette() {
                 <Link to={`/logement/${logement.id}`} key={logement.id}>
                     <div
                         className="logement-card"
-                        style={{
-                            backgroundImage: `url(${logement.cover})`,
-                            backgroundPosition: 'center',
-                            backgroundRepeat: 'no-repeat',
-                            backgroundSize: 'cover',
-                        }}
-                    >
+                        // style={{
+                        //     backgroundImage: `url(${logement.cover})`,
+                        //     backgroundPosition: 'center',
+                        //     backgroundRepeat: 'no-repeat',
+                        //     backgroundSize: 'cover',
+                        // }}
+                    > <img src={logement.cover} alt=''/>
                         <span className="logement-title">{logement.title}</span>
                     </div>
                 </Link>

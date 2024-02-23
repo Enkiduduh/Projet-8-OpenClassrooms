@@ -35,35 +35,87 @@ function CardsPage() {
     const logement = logements.find((logement) => logement.id === id)
     console.log(logement)
 
-    return (
-        <div className="container">
-            <Banner />
-            {logement && (
-                <div className="cards-container">
-                    <LogementCover arrayOfPictures={logement.pictures}/>
-                    <div className="card-infos">
-                        <LogementLocation title={logement.title} location={logement.location} />
-                        <LogementHost name={logement.host.name} picture={logement.host.picture}/>
-                    </div>
-                    <div className="card-tags-and-rating">
-                        <Tags tags={logement.tags} />
-                        <Rating rating={logement.rating} />
-                    </div>
+    const isScreenWider = window.innerWidth > 480
 
-                    <div className="card-collapse">
-                        <CollapseInLogement
-                            str="description"
-                            text={logement.description}
-                        />
-                        <CollapseInLogement
-                            str="Equipements"
-                            text={logement.equipments}
-                        />
-                    </div>
+    return (
+        <>
+            {isScreenWider ? (
+                <div className="container">
+                    <Banner />
+                    {logement && (
+                        <div className="cards-container">
+                            <LogementCover
+                                arrayOfPictures={logement.pictures}
+                            />
+                            <div className="card-infos">
+                                <LogementLocation
+                                    title={logement.title}
+                                    location={logement.location}
+                                />
+                                <LogementHost
+                                    name={logement.host.name}
+                                    picture={logement.host.picture}
+                                />
+                            </div>
+                            <div className="card-tags-and-rating">
+                                <Tags tags={logement.tags} />
+                                <Rating rating={logement.rating} />
+                            </div>
+
+                            <div className="card-collapse">
+                                <CollapseInLogement
+                                    str="description"
+                                    text={logement.description}
+                                />
+                                <CollapseInLogement
+                                    str="Equipements"
+                                    text={logement.equipments}
+                                />
+                            </div>
+                        </div>
+                    )}
+                    <Footer />
+                </div>
+            ) : (
+                <div className="container">
+                    <Banner />
+                    {logement && (
+                        <div className="cards-container">
+                            <LogementCover
+                                arrayOfPictures={logement.pictures}
+                            />
+                            <div className="card-infos">
+                                <LogementLocation
+                                    title={logement.title}
+                                    location={logement.location}
+                                />
+                            </div>
+                            <div className="card-tags-and-rating">
+                                <Tags tags={logement.tags} />
+                            </div>
+                            <div className="card-host-and-rating">
+                                <Rating rating={logement.rating} />
+                                <LogementHost
+                                    name={logement.host.name}
+                                    picture={logement.host.picture}
+                                />
+                            </div>
+                            <div className="card-collapse">
+                                <CollapseInLogement
+                                    str="description"
+                                    text={logement.description}
+                                />
+                                <CollapseInLogement
+                                    str="Equipements"
+                                    text={logement.equipments}
+                                />
+                            </div>
+                        </div>
+                    )}
+                    <Footer />
                 </div>
             )}
-            <Footer />
-        </div>
+        </>
     )
 }
 
