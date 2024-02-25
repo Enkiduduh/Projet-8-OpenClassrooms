@@ -1,7 +1,7 @@
 .card-tags {
-display : flex;
-margin: 0;
-padding: 0;
+    display: flex;
+    margin: 0;
+    padding: 0;
 
     .tags {
         color: white;
@@ -12,5 +12,15 @@ padding: 0;
         font-size: 10px;
         font-weight: bold;
         text-align: center;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .card-tags-480 {
+        .tags {
+            border-radius: 5px;
+            font-size: 10px;
+            padding: 3px 15px;
+        }
     }
 }

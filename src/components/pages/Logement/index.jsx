@@ -12,6 +12,21 @@ import CollapseInLogement from '../../CollapseInLogement'
 function CardsPage() {
     const [logements, setLogements] = useState([])
 
+    const [isScreenWider, setIsScreenWider] = useState(window.innerWidth > 480);
+
+    useEffect(() => {
+      const handleResize = () => {
+          setIsScreenWider(window.innerWidth > 480);
+      };
+
+      window.addEventListener('resize', handleResize);
+
+      return () => {
+          window.removeEventListener('resize', handleResize);
+      };
+  }, []);
+
+
     const { id } = useParams()
     console.log({ id })
 
@@ -34,8 +49,6 @@ function CardsPage() {
 
     const logement = logements.find((logement) => logement.id === id)
     console.log(logement)
-
-    const isScreenWider = window.innerWidth > 480
 
     return (
         <>
@@ -64,7 +77,7 @@ function CardsPage() {
 
                             <div className="card-collapse">
                                 <CollapseInLogement
-                                    str="description"
+                                    str="Description"
                                     text={logement.description}
                                 />
                                 <CollapseInLogement
@@ -90,7 +103,7 @@ function CardsPage() {
                                     location={logement.location}
                                 />
                             </div>
-                            <div className="card-tags-and-rating">
+                            <div className="card-tags">
                                 <Tags tags={logement.tags} />
                             </div>
                             <div className="card-host-and-rating">
@@ -102,7 +115,7 @@ function CardsPage() {
                             </div>
                             <div className="card-collapse">
                                 <CollapseInLogement
-                                    str="description"
+                                    str="Description"
                                     text={logement.description}
                                 />
                                 <CollapseInLogement

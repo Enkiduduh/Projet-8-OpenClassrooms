@@ -10,7 +10,7 @@
             border-radius: 8px;
             margin-bottom: 30px;
             position: relative;
-            display:flex;
+            display: flex;
             justify-content: space-between;
             align-items: center;
             img {
@@ -26,7 +26,6 @@
                 font-weight: 600;
                 font-size: 28px;
             }
-
         }
         .card-tags-and-rating {
             display: flex;
@@ -38,6 +37,45 @@
             display: flex;
             justify-content: space-between;
             margin: 10px 0;
+        }
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .cards-container {
+        margin: 0 15px;
+        .card-tags {
+            display: inline-block;
+            margin: 10px 0 10px 0;
+        }
+        .card-img {
+            margin-bottom: 5px;
+        }
+        .card-infos {
+            .location-span-wrapper {
+                display: flex;
+                flex-direction: column;
+            }
+            .location-span1 {
+                color: black;
+                color: #ff6060;
+                font-size: 20px;
+                margin-bottom: 10px;
+            }
+            .location-span2 {
+                color: black;
+            }
+        }
+        .card-host-and-rating {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+        .card-collapse {
+            margin: 10px 0;
+            flex-direction: column;
+            font-weight: bold;
         }
     }
 }

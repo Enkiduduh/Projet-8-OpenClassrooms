@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect  } from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {
     faChevronRight,
@@ -8,6 +8,19 @@ import {
 function LogementCover({ arrayOfPictures }) {
     const [currentIndex, setCurrentIndex] = useState(0)
     const images = arrayOfPictures || []
+    const [isScreenWider, setIsScreenWider] = useState(window.innerWidth > 480);
+    
+    useEffect(() => {
+      const handleResize = () => {
+          setIsScreenWider(window.innerWidth > 480);
+      };
+
+      window.addEventListener('resize', handleResize);
+
+      return () => {
+          window.removeEventListener('resize', handleResize);
+      };
+  }, []);
 
     const goToPreviousSlide = () => {
         setCurrentIndex((prevIndex) =>
@@ -20,7 +33,6 @@ function LogementCover({ arrayOfPictures }) {
             prevIndex === images.length - 1 ? 0 : prevIndex + 1,
         )
     }
-    const isScreenWider = window.innerWidth > 480
 
     return (
         <>

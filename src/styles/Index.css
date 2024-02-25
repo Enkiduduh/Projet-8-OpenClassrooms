@@ -66,7 +66,7 @@
 
 @media only screen and (max-width: 480px) {
   .banner {
-    margin: 0 10px;
+    margin: 0 15px;
   }
   .banner img {
     width: 90px;
@@ -190,6 +190,42 @@
   margin: 10px 0;
 }
 
+@media only screen and (max-width: 480px) {
+  .cards-container {
+    margin: 0 15px;
+  }
+  .cards-container .card-tags {
+    display: inline-block;
+    margin: 10px 0 10px 0;
+  }
+  .cards-container .card-img {
+    margin-bottom: 5px;
+  }
+  .cards-container .card-infos .location-span-wrapper {
+    display: flex;
+    flex-direction: column;
+  }
+  .cards-container .card-infos .location-span1 {
+    color: black;
+    color: #ff6060;
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+  .cards-container .card-infos .location-span2 {
+    color: black;
+  }
+  .cards-container .card-host-and-rating {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  .cards-container .card-collapse {
+    margin: 10px 0;
+    flex-direction: column;
+    font-weight: bold;
+  }
+}
 .BannerImgAbout-container {
   margin: 0 50px 20px 50px;
 }
@@ -398,7 +434,22 @@ a .logement-card .logement-title {
   color: blue;
 }
 
-.chevronLeft, .chevronRight {
+@media only screen and (max-width: 480px) {
+  .container-cil {
+    width: 100%;
+  }
+  .container-cil .collapse-container {
+    width: 100%;
+  }
+  .container-cil .window-content {
+    padding: 15px 10px;
+    width: 100%;
+    color: black;
+    font-weight: 200;
+  }
+}
+.chevronLeft,
+.chevronRight {
   position: relative;
   font-size: 50px;
   color: white;
@@ -420,6 +471,11 @@ a .logement-card .logement-title {
   text-shadow: 1px 1px 2px black;
 }
 
+@media only screen and (max-width: 480px) {
+  .card-img {
+    width: 100%;
+  }
+}
 .star {
   color: lightgrey;
   margin-left: 5px;
@@ -443,4 +499,12 @@ a .logement-card .logement-title {
   font-size: 10px;
   font-weight: bold;
   text-align: center;
+}
+
+@media only screen and (max-width: 480px) {
+  .card-tags-480 .tags {
+    border-radius: 5px;
+    font-size: 10px;
+    padding: 3px 15px;
+  }
 }/*# sourceMappingURL=Index.css.map */
