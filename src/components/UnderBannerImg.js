@@ -1,5 +1,19 @@
+import React, { useState, useEffect } from 'react'
+
 function UnderBannerImg() {
-    const isScreenWider = window.innerWidth > 480
+  const [isScreenWider, setIsScreenWider] = useState(window.innerWidth > 480)
+
+  useEffect(() => {
+      const handleResize = () => {
+          setIsScreenWider(window.innerWidth > 480)
+      }
+
+      window.addEventListener('resize', handleResize)
+
+      return () => {
+          window.removeEventListener('resize', handleResize)
+      }
+  }, [])
 
     return (
         <div className="UnderBannerImg-container">

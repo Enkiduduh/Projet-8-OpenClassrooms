@@ -1,23 +1,47 @@
 .container {
-  overflow: hidden;
-  .notfound-infos {
-    margin: 50px 50px 80px 50px;
-    text-align: center;
-    font-family: 'Montserrat', sans-serif;
-    color: #FF6060;
+    overflow: hidden;
+    .notfound-infos {
+        margin: 50px 50px 80px 50px;
+        text-align: center;
+        font-family: 'Montserrat', sans-serif;
+        color: #ff6060;
 
-    .error {
-      font-size: 150px;
-      font-weight: bold;
-      margin: 0 0 40px 0;
+        .error {
+            font-size: 150px;
+            font-weight: bold;
+            margin: 0 0 40px 0;
+        }
+        .message {
+            margin: 0 0 60px 0;
+            font-size: 18px;
+            font-weight: bold;
+        }
+        .link,
+        link:active {
+            color: inherit;
+        }
     }
-    .message {
-      margin: 0 0 60px 0;
-      font-size: 18px;
-      font-weight: bold;
+}
+@media only screen and (max-width: 480px) {
+    .container {
+        .notfound-infos {
+            .error {
+                font-size: 80px;
+                font-weight: bold;
+                margin: 0 0 40px 0;
+            }
+            .message {
+                margin: 0 0 60px 0;
+                font-size: 16px;
+                font-weight: 100;
+            }
+            .link,
+            link:active {
+                color: black;
+                font-size: 14px;
+                text-decoration: underline;
+                // font-weight: bold;
+            }
+        }
     }
-    .link, link:active {
-      color: inherit;
-    }
-  }
 }

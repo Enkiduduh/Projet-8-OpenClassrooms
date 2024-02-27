@@ -20,6 +20,18 @@
 
 @media only screen and (max-width: 480px) {
     .card-img {
-      width: 100%;
+        width: 100%;
     }
+    .chevronLeft,
+    .chevronRight {
+        position: relative;
+        font-size: 25px;
+        color: white;
+    }
+    .chevronRight {
+      margin: 0 10px 0 0;
+  }
+  .chevronLeft {
+      margin: 0 0 0 10px;
+  }
 }

@@ -73,6 +73,7 @@
   }
   .banner .banner-text-wrapper span {
     font-size: 14px;
+    color: black;
   }
 }
 .UnderBannerImg-container {
@@ -131,7 +132,7 @@
   margin: 50px 50px 80px 50px;
   text-align: center;
   font-family: "Montserrat", sans-serif;
-  color: #FF6060;
+  color: #ff6060;
 }
 .container .notfound-infos .error {
   font-size: 150px;
@@ -143,10 +144,29 @@
   font-size: 18px;
   font-weight: bold;
 }
-.container .notfound-infos .link, .container .notfound-infos link:active {
+.container .notfound-infos .link,
+.container .notfound-infos link:active {
   color: inherit;
 }
 
+@media only screen and (max-width: 480px) {
+  .container .notfound-infos .error {
+    font-size: 80px;
+    font-weight: bold;
+    margin: 0 0 40px 0;
+  }
+  .container .notfound-infos .message {
+    margin: 0 0 60px 0;
+    font-size: 16px;
+    font-weight: 100;
+  }
+  .container .notfound-infos .link,
+  .container .notfound-infos link:active {
+    color: black;
+    font-size: 14px;
+    text-decoration: underline;
+  }
+}
 .container {
   overflow: hidden;
   font-family: "Montserrat", sans-serif;
@@ -191,36 +211,36 @@
 }
 
 @media only screen and (max-width: 480px) {
-  .cards-container {
+  .container .cards-container {
     margin: 0 15px;
   }
-  .cards-container .card-tags {
+  .container .cards-container .card-tags {
     display: inline-block;
     margin: 10px 0 10px 0;
   }
-  .cards-container .card-img {
+  .container .cards-container .card-img {
     margin-bottom: 5px;
   }
-  .cards-container .card-infos .location-span-wrapper {
+  .container .cards-container .card-infos .location-span-wrapper {
     display: flex;
     flex-direction: column;
   }
-  .cards-container .card-infos .location-span1 {
+  .container .cards-container .card-infos .location-span1 {
     color: black;
     color: #ff6060;
     font-size: 20px;
     margin-bottom: 10px;
   }
-  .cards-container .card-infos .location-span2 {
+  .container .cards-container .card-infos .location-span2 {
     color: black;
   }
-  .cards-container .card-host-and-rating {
+  .container .cards-container .card-host-and-rating {
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin-bottom: 10px;
   }
-  .cards-container .card-collapse {
+  .container .cards-container .card-collapse {
     margin: 10px 0;
     flex-direction: column;
     font-weight: bold;
@@ -439,11 +459,11 @@ a .logement-card .logement-title {
     width: 100%;
   }
   .container-cil .collapse-container {
-    width: 100%;
+    width: 93%;
   }
   .container-cil .window-content {
     padding: 15px 10px;
-    width: 100%;
+    width: 92%;
     color: black;
     font-weight: 200;
   }
@@ -474,6 +494,18 @@ a .logement-card .logement-title {
 @media only screen and (max-width: 480px) {
   .card-img {
     width: 100%;
+  }
+  .chevronLeft,
+  .chevronRight {
+    position: relative;
+    font-size: 25px;
+    color: white;
+  }
+  .chevronRight {
+    margin: 0 10px 0 0;
+  }
+  .chevronLeft {
+    margin: 0 0 0 10px;
   }
 }
 .star {
