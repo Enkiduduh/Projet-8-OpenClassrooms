@@ -111,7 +111,7 @@
 
 @media only screen and (max-width: 480px) {
   .UnderBannerImg-container {
-    margin: 0 10px;
+    margin: 0 15px;
   }
   .UnderBannerImg-container .UnderBannerImg-bg {
     padding: 10px;
@@ -259,6 +259,11 @@
   padding: 70px 0;
 }
 
+@media only screen and (max-width: 480px) {
+  .BannerImgAbout-container {
+    margin: 0 15px 20px 15px;
+  }
+}
 .container {
   display: flex;
   flex-direction: column;
@@ -310,6 +315,16 @@
   color: blue;
 }
 
+@media only screen and (max-width: 480px) {
+  .container .collapse-container {
+    width: 90%;
+    margin: 10px auto;
+  }
+  .container .window-content {
+    width: 86%;
+    margin: 0 auto;
+  }
+}
 .card-section-container {
   margin: 20px 10px;
   background: whitesmoke;
@@ -325,6 +340,7 @@
 @media only screen and (max-width: 480px) {
   .card-section-container {
     padding: 0;
+    margin: 20px 15px;
     background: white;
     display: flex;
     flex-direction: column;
@@ -539,4 +555,7 @@ a .logement-card .logement-title {
     font-size: 10px;
     padding: 3px 15px;
   }
+}
+body {
+  margin: 0;
 }/*# sourceMappingURL=Index.css.map */
