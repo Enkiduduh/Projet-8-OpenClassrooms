@@ -1,27 +1,52 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faStar } from '@fortawesome/free-solid-svg-icons'
-import { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react'
 
 function Rating({ rating }) {
-    const [stars, setStars] = useState([]);
+    const [stars, setStars] = useState([])
+    const [isScreenWider, setIsScreenWider] = useState(window.innerWidth > 480)
 
     useEffect(() => {
-        const coloredStars = [];
+        const coloredStars = []
         for (let i = 1; i <= 5; i++) {
             if (i <= rating) {
-                coloredStars.push(<FontAwesomeIcon key={i} icon={faStar} className="star star-colored" />);
+                coloredStars.push(
+                    <FontAwesomeIcon
+                        key={i}
+                        icon={faStar}
+                        className="star star-colored"
+                    />,
+                )
             } else {
-                coloredStars.push(<FontAwesomeIcon key={i} icon={faStar} className="star" />);
+                coloredStars.push(
+                    <FontAwesomeIcon key={i} icon={faStar} className="star" />,
+                )
             }
         }
-        setStars(coloredStars);
-    }, [rating]);
+        setStars(coloredStars)
+    }, [rating])
+
+    useEffect(() => {
+        const handleResize = () => {
+            setIsScreenWider(window.innerWidth > 480)
+        }
+
+        window.addEventListener('resize', handleResize)
+
+        return () => {
+            window.removeEventListener('resize', handleResize)
+        }
+    }, [])
 
     return (
-        <div className="card-rating">
-            {stars}
-        </div>
-    );
+        <>
+            {isScreenWider ? (
+                <div className="card-rating">{stars}</div>
+            ) : (
+                <div className="card-rating">{stars}</div>
+            )}
+        </>
+    )
 }
 
-export default Rating;
+export default Rating

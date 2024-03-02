@@ -7,3 +7,15 @@
   color: #ff6060;
 }
 
+@media only screen and (max-width:480px) {
+  .card-rating {
+    width: 150px;
+    .star {
+      color: lightgrey;
+      margin-left: 5px;
+    }
+    .star-colored {
+      color: #ff6060;
+    }
+  }
+}

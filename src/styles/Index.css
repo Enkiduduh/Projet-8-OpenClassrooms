@@ -47,15 +47,15 @@
 .banner .banner-text-wrapper {
   font-size: 18px;
   display: flex;
-  justify-content: space-between;
+  justify-content: right;
   align-items: center;
   padding: 20px 0;
   width: 50%;
   font-family: "Montserrat", sans-serif;
 }
 .banner .banner-text-wrapper span {
-  margin: 0 10px;
-  color: #ff6060;
+  margin: 0 0 0 50px;
+  color: black;
 }
 .banner .banner-text-wrapper span:hover {
   border-bottom: 2px solid black;
@@ -69,11 +69,15 @@
     margin: 0 15px;
   }
   .banner img {
-    width: 90px;
+    width: 110px;
+  }
+  .banner .banner-text-wrapper {
+    width: 70%;
   }
   .banner .banner-text-wrapper span {
     font-size: 14px;
     color: black;
+    margin: 0 0 0 20px;
   }
 }
 .UnderBannerImg-container {
@@ -317,8 +321,8 @@
 
 @media only screen and (max-width: 480px) {
   .container .collapse-container {
-    width: 90%;
     margin: 10px auto;
+    width: 90%;
   }
   .container .window-content {
     width: 86%;
@@ -533,6 +537,18 @@ a .logement-card .logement-title {
   color: #ff6060;
 }
 
+@media only screen and (max-width: 480px) {
+  .card-rating {
+    width: 150px;
+  }
+  .card-rating .star {
+    color: lightgrey;
+    margin-left: 5px;
+  }
+  .card-rating .star-colored {
+    color: #ff6060;
+  }
+}
 .card-tags {
   display: flex;
   margin: 0;

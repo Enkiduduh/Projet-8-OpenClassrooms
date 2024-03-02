@@ -1,9 +1,13 @@
 import React, { useState, useEffect } from 'react'
+import { useLocation } from 'react-router-dom'
 import { Link } from 'react-router-dom'
 import logo from '../assets/logo.png'
 
 function Banner() {
     const [isScreenWider, setIsScreenWider] = useState(window.innerWidth > 480)
+    const location = useLocation()
+    const currentPage = location.pathname
+    console.log(currentPage)
 
     useEffect(() => {
         const handleResize = () => {
@@ -26,15 +30,31 @@ function Banner() {
                     </div>
                     <div className="banner-text-wrapper">
                         <div>
-                            <Link to="/">
-                                <span>Home</span>
-                            </Link>
+                            {currentPage === '/home' ? (
+                                <Link to="/home">
+                                    <span
+                                        style={{ textDecoration: 'underline' }}
+                                    >
+                                        Home
+                                    </span>
+                                </Link>
+                            ) : (
+                                <Link to="/home">
+                                    <span>Home</span>
+                                </Link>
+                            )}
                         </div>
-                        <div>
+                        {currentPage === '/about' ? (
+                            <Link to="/about">
+                                <span style={{ textDecoration: 'underline' }}>
+                                    A propos
+                                </span>
+                            </Link>
+                        ) : (
                             <Link to="/about">
                                 <span>A propos</span>
                             </Link>
-                        </div>
+                        )}
                     </div>
                 </>
             ) : (
@@ -44,14 +64,34 @@ function Banner() {
                     </div>
                     <div className="banner-text-wrapper">
                         <div>
-                            <Link to="/">
-                                <span>ACCUEUIL</span>
-                            </Link>
+                            {currentPage === '/home' ? (
+                                <Link to="/home">
+                                    <span
+                                        style={{ textDecoration: 'underline' }}
+                                    >
+                                        ACCUEUIL
+                                    </span>
+                                </Link>
+                            ) : (
+                                <Link to="/home">
+                                    <span>ACCUEUIL</span>
+                                </Link>
+                            )}
                         </div>
                         <div>
-                            <Link to="/about">
-                                <span>A PROPOS</span>
-                            </Link>
+                            {currentPage === '/about' ? (
+                                <Link to="/about">
+                                    <span
+                                        style={{ textDecoration: 'underline' }}
+                                    >
+                                        A PROPOS
+                                    </span>
+                                </Link>
+                            ) : (
+                                <Link to="/about">
+                                    <span>A PROPOS</span>
+                                </Link>
+                            )}
                         </div>
                     </div>
                 </>
