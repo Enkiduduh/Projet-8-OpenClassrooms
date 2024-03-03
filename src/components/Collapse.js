@@ -4,23 +4,26 @@ import { useState, useEffect } from 'react'
 
 function Collapse({ str, text }) {
     const [windowDown, setWindowDown] = useState(false)
-    const [isScreenWider, setIsScreenWider] = useState(window.innerWidth > 480)
+    const [isScreenWider480, setIsScreenWider480] = useState(window.innerWidth > 480)
+    const [isScreenWider1140, setIsScreenWider1140] = useState(window.innerWidth > 1140)
 
     useEffect(() => {
         const handleResize = () => {
-            setIsScreenWider(window.innerWidth > 480)
+            setIsScreenWider480(window.innerWidth > 480)
+            setIsScreenWider1140(window.innerWidth > 1140)
         }
 
         window.addEventListener('resize', handleResize)
 
         return () => {
             window.removeEventListener('resize', handleResize)
+
         }
     }, [])
 
     return (
         <div className="container">
-            {isScreenWider ? (
+            {(isScreenWider480 && !isScreenWider1140) ? (
                 <>
                     <div className="collapse-container">
                         <div>{str}</div>

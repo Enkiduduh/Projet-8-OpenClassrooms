@@ -50,7 +50,7 @@
   justify-content: right;
   align-items: center;
   padding: 20px 0;
-  width: 50%;
+  width: 70%;
   font-family: "Montserrat", sans-serif;
 }
 .banner .banner-text-wrapper span {
@@ -319,6 +319,16 @@
   color: blue;
 }
 
+@media only screen and (max-width: 1140px) {
+  .container .collapse-container {
+    margin: 10px auto;
+    width: 60%;
+  }
+  .container .window-content {
+    width: 58%;
+    margin: 0 auto;
+  }
+}
 @media only screen and (max-width: 480px) {
   .container .collapse-container {
     margin: 10px auto;
@@ -330,7 +340,7 @@
   }
 }
 .card-section-container {
-  margin: 20px 10px;
+  margin: 20px 50px;
   background: whitesmoke;
   padding: 30px;
   display: grid;
@@ -361,6 +371,8 @@ a .logement-card {
   position: relative;
   overflow: hidden;
   z-index: 0;
+  display: flex;
+  justify-content: center;
 }
 a .logement-card .logement-title {
   position: relative;

@@ -55,6 +55,20 @@
         }
     }
 }
+
+@media only screen and (max-width:1140px) {
+  .container {
+    .collapse-container {
+      margin: 10px auto;
+      width: 60%;
+    }
+    .window-content {
+      width: 58%;
+      margin: 0 auto;
+    }
+  }
+}
+
 @media only screen and (max-width:480px) {
   .container {
     .collapse-container {
