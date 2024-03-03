@@ -57,6 +57,20 @@
         }
     }
 }
+@media only screen and (max-width:1140px) {
+  .container-cil {
+    width: 100%;
+    .collapse-container {
+        width: 93%;
+    }
+    .window-content {
+        padding: 15px 10px;
+        width: 92%;
+        color: black;
+        font-weight: 200;
+    }
+}
+}
 
 @media only screen and (max-width: 480px) {
     .container-cil {
