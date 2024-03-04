@@ -1,11 +1,15 @@
 .container {
-    overflow: hidden;
+    // overflow: hidden;
+    justify-content: space-between;
     .notfound-infos {
         margin: 50px 50px 80px 50px;
         text-align: center;
         font-family: 'Montserrat', sans-serif;
         color: #ff6060;
-
+        height: 400px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
         .error {
             font-size: 150px;
             font-weight: bold;
@@ -25,6 +29,8 @@
 @media only screen and (max-width: 480px) {
     .container {
         .notfound-infos {
+          height: 300px;
+
             .error {
                 font-size: 80px;
                 font-weight: bold;
