@@ -35,12 +35,12 @@ function Banner() {
                                     <span
                                         style={{ textDecoration: 'underline' }}
                                     >
-                                        Home
+                                        Accueuil
                                     </span>
                                 </Link>
                             ) : (
                                 <Link to="/home">
-                                    <span>Home</span>
+                                    <span>Accueuil</span>
                                 </Link>
                             )}
                         </div>
