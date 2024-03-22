@@ -1,4 +1,4 @@
-import React, { useState, useEffect  } from 'react'
+import React, { useState, useEffect } from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {
     faChevronRight,
@@ -8,19 +8,19 @@ import {
 function LogementCover({ arrayOfPictures }) {
     const [currentIndex, setCurrentIndex] = useState(0)
     const images = arrayOfPictures || []
-    const [isScreenWider, setIsScreenWider] = useState(window.innerWidth > 480);
-    
+    const [isScreenWider, setIsScreenWider] = useState(window.innerWidth > 480)
+
     useEffect(() => {
-      const handleResize = () => {
-          setIsScreenWider(window.innerWidth > 480);
-      };
+        const handleResize = () => {
+            setIsScreenWider(window.innerWidth > 480)
+        }
 
-      window.addEventListener('resize', handleResize);
+        window.addEventListener('resize', handleResize)
 
-      return () => {
-          window.removeEventListener('resize', handleResize);
-      };
-  }, []);
+        return () => {
+            window.removeEventListener('resize', handleResize)
+        }
+    }, [])
 
     const goToPreviousSlide = () => {
         setCurrentIndex((prevIndex) =>
@@ -38,7 +38,7 @@ function LogementCover({ arrayOfPictures }) {
         <>
             {images.length > 0 && (
                 <div>
-                    {isScreenWider ? (
+                    {images.length === 1 ? (
                         <div
                             className="card-img"
                             style={{
@@ -47,43 +47,57 @@ function LogementCover({ arrayOfPictures }) {
                                 backgroundRepeat: 'no-repeat',
                                 backgroundSize: 'cover',
                             }}
-                        >
-                            <FontAwesomeIcon
-                                icon={faChevronLeft}
-                                className="chevronLeft"
-                                onClick={goToPreviousSlide}
-                            />
-                            <span className="counter">
-                                {' '}
-                                {`${currentIndex + 1}`}/{images.length}
-                            </span>
-                            <FontAwesomeIcon
-                                icon={faChevronRight}
-                                className="chevronRight"
-                                onClick={goToNextSlide}
-                            />
-                        </div>
+                        />
                     ) : (
-                        <div
-                            className="card-img"
-                            style={{
-                                backgroundImage: `url(${images[currentIndex]})`,
-                                backgroundPosition: 'center',
-                                backgroundRepeat: 'no-repeat',
-                                backgroundSize: 'cover',
-                            }}
-                        >
-                            <FontAwesomeIcon
-                                icon={faChevronLeft}
-                                className="chevronLeft"
-                                onClick={goToPreviousSlide}
-                            />
-                            <FontAwesomeIcon
-                                icon={faChevronRight}
-                                className="chevronRight"
-                                onClick={goToNextSlide}
-                            />
-                        </div>
+                        <>
+                            {isScreenWider ? (
+                                <div
+                                    className="card-img"
+                                    style={{
+                                        backgroundImage: `url(${images[currentIndex]})`,
+                                        backgroundPosition: 'center',
+                                        backgroundRepeat: 'no-repeat',
+                                        backgroundSize: 'cover',
+                                    }}
+                                >
+                                    <FontAwesomeIcon
+                                        icon={faChevronLeft}
+                                        className="chevronLeft"
+                                        onClick={goToPreviousSlide}
+                                    />
+                                    <span className="counter">
+                                        {' '}
+                                        {`${currentIndex + 1}`}/{images.length}
+                                    </span>
+                                    <FontAwesomeIcon
+                                        icon={faChevronRight}
+                                        className="chevronRight"
+                                        onClick={goToNextSlide}
+                                    />
+                                </div>
+                            ) : (
+                                <div
+                                    className="card-img"
+                                    style={{
+                                        backgroundImage: `url(${images[currentIndex]})`,
+                                        backgroundPosition: 'center',
+                                        backgroundRepeat: 'no-repeat',
+                                        backgroundSize: 'cover',
+                                    }}
+                                >
+                                    <FontAwesomeIcon
+                                        icon={faChevronLeft}
+                                        className="chevronLeft"
+                                        onClick={goToPreviousSlide}
+                                    />
+                                    <FontAwesomeIcon
+                                        icon={faChevronRight}
+                                        className="chevronRight"
+                                        onClick={goToNextSlide}
+                                    />
+                                </div>
+                            )}
+                        </>
                     )}
                 </div>
             )}
