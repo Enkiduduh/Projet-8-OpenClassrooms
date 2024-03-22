@@ -5,14 +5,16 @@ import LogementsSection from '../../LogementsSection'
 import LogementVignette from '../../LogementVignette'
 function Home() {
     return (
-        <div style={{ overflow: 'hidden'}}>
-            <Banner />
-            <UnderBannerImg />
-            <LogementsSection>
-            <LogementVignette />
-            </LogementsSection>
+        <>
+            <div style={{ overflow: 'hidden', position: 'relative' }}>
+                <Banner />
+                <UnderBannerImg />
+                <LogementsSection>
+                    <LogementVignette />
+                </LogementsSection>
+            </div>
             <Footer />
-        </div>
+        </>
     )
 }
 

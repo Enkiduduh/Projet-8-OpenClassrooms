@@ -29,7 +29,7 @@ function Collapse({ str, text }) {
                         <div>{str}</div>
                         <div onClick={() => setWindowDown(!windowDown)}>
                             <FontAwesomeIcon
-                                icon={windowDown ? faChevronUp : faChevronDown}
+                                icon={windowDown ? faChevronDown : faChevronUp}
                             />
                         </div>
                     </div>
@@ -49,7 +49,7 @@ function Collapse({ str, text }) {
                         <div>{str}</div>
                         <div onClick={() => setWindowDown(!windowDown)}>
                             <FontAwesomeIcon
-                                icon={windowDown ? faChevronUp : faChevronDown}
+                                icon={windowDown ? faChevronDown : faChevronUp}
                             />
                         </div>
                     </div>

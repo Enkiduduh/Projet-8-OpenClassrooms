@@ -4,7 +4,6 @@
   color: white;
   margin: 20px 0 0 0;
   overflow: hidden;
-  position: relative;
 }
 .footer .footer-logo-wrapper {
   display: flex;
@@ -138,7 +137,7 @@
   text-align: center;
   font-family: "Montserrat", sans-serif;
   color: #ff6060;
-  height: 400px;
+  height: 470px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;

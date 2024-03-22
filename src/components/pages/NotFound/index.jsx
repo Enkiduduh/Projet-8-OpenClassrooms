@@ -26,7 +26,7 @@ function NotFound() {
                     <p className="message">
                         Oups! La page que vous demandez n'existe pas.
                     </p>
-                    <a className="link" href="../home">
+                    <a className="link" href="../">
                         Retourner sur la page d'accueuil
                     </a>
                 </div>
@@ -36,7 +36,7 @@ function NotFound() {
                     <p className="message">
                         Oups! La page que vous demandez n'existe pas.
                     </p>
-                    <a className="link" href="../home">
+                    <a className="link" href="../">
                         Retourner sur la page d'accueuil
                     </a>
                 </div>

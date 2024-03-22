@@ -21,15 +21,19 @@ function About() {
         cela permet à nos équipes de vérifier que les standards sont bien respectés.
         Nous organisons également des ateliers sur la sécurité domestique pour nos hôtes.`
     return (
-        <div className="container">
-            <Banner />
-            <BannerImgAbout />
-            <Collapse str="Fiabilité" text={text_1} />
-            <Collapse str="Respect" text={text_2} />
-            <Collapse str="Service" text={text_3} />
-            <Collapse str="Sécurité" text={text_4} />
-            <Footer />
-        </div>
+        <>
+            <div className="container">
+                <Banner />
+                <BannerImgAbout />
+                <Collapse str="Fiabilité" text={text_1} />
+                <Collapse str="Respect" text={text_2} />
+                <Collapse str="Service" text={text_3} />
+                <Collapse str="Sécurité" text={text_4} />
+                <div className="footer-about">
+                    <Footer />
+                </div>
+            </div>
+        </>
     )
 }
 

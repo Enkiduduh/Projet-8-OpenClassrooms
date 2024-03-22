@@ -1,4 +1,5 @@
 import { useParams } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 import React, { useState, useEffect } from 'react'
 import Footer from '../../Footer'
 import Banner from '../../Banner'
@@ -11,21 +12,23 @@ import CollapseInLogement from '../../CollapseInLogement'
 
 function CardsPage() {
     const [logements, setLogements] = useState([])
+    const [logement, setLogement] = useState(null)
+    const [idExists, setIdExists] = useState(true)
+    const [isScreenWider, setIsScreenWider] = useState(window.innerWidth > 480)
 
-    const [isScreenWider, setIsScreenWider] = useState(window.innerWidth > 480);
+    let navigate = useNavigate()
 
     useEffect(() => {
-      const handleResize = () => {
-          setIsScreenWider(window.innerWidth > 480);
-      };
+        const handleResize = () => {
+            setIsScreenWider(window.innerWidth > 480)
+        }
 
-      window.addEventListener('resize', handleResize);
+        window.addEventListener('resize', handleResize)
 
-      return () => {
-          window.removeEventListener('resize', handleResize);
-      };
-  }, []);
-
+        return () => {
+            window.removeEventListener('resize', handleResize)
+        }
+    }, [])
 
     const { id } = useParams()
     console.log({ id })
@@ -47,8 +50,18 @@ function CardsPage() {
         fetchData()
     }, [])
 
-    const logement = logements.find((logement) => logement.id === id)
-    console.log(logement)
+    useEffect(() => {
+        if (logements.length > 0) {
+            const selectedLogement = logements.find(
+                (logement) => logement.id === id,
+            )
+            if (selectedLogement) {
+                setLogement(selectedLogement)
+            } else {
+                navigate('/NotFound')
+            }
+        }
+    }, [id, logements, navigate])
 
     return (
         <>

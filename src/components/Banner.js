@@ -30,8 +30,8 @@ function Banner() {
                     </div>
                     <div className="banner-text-wrapper">
                         <div>
-                            {currentPage === '/home' ? (
-                                <Link to="/home">
+                            {currentPage === '/' ? (
+                                <Link to="/">
                                     <span
                                         style={{ textDecoration: 'underline' }}
                                     >
@@ -39,7 +39,7 @@ function Banner() {
                                     </span>
                                 </Link>
                             ) : (
-                                <Link to="/home">
+                                <Link to="/">
                                     <span>Accueuil</span>
                                 </Link>
                             )}
